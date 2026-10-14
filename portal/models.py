@@ -9,7 +9,7 @@ class Professor(models.Model):
     email = models.EmailField()
     criacao_data = models.DateTimeField(default=timezone.now)
     telefone = models.CharField(max_length=15)
-    registro = models.CharField(max_length=10)
+    registro = models.CharField(max_length=10, unique=True) #ADICIONEI COMO UNICO "unique=True"
     disciplina = models.CharField(max_length=30)
     ativo = models.BooleanField(default=True)
     observacao = models.TextField(blank=True)
@@ -23,7 +23,7 @@ class Aluno(models.Model):
     sobrenome = models.CharField(max_length=50)
     email = models.EmailField()
     telefone = models.CharField(max_length=15)
-    matricula = models.CharField(max_length=10) #TROQUEI ".INTERFIELD" PARA MODELS.CHARFIELD
+    matricula = models.CharField(max_length=10, unique=True) #TROQUEI ".INTERFIELD" PARA MODELS.CHARFIELD, E ADICIONEI COMO UNICO "unique=True"
     criacao_data = models.DateTimeField(default=timezone.now)
     observacao = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)

@@ -10,7 +10,7 @@ Op projeto está fazendo uma tabela que contenha professor aluno e aula.
 
 2- 
  ERRO ENCONTRADO:  matricula = models.IntegerField() 
- CORREÇÃO: em vez de .IntegerField deveria ser charfild
+ CORREÇÃO: em vez de .IntegerField deveria ser charfild, E ADICIONEI COMO UNICO "unique=True"
 
 
 3- 
